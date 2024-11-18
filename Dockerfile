@@ -18,8 +18,8 @@ ENTRYPOINT ["dumb-init", "--"]
 WORKDIR /app
 COPY --from=build /app /app
 
-EXPOSE 4000
-ENV PDS_PORT=4000
+EXPOSE 3000
+ENV PDS_PORT=3000
 ENV NODE_ENV=production
 # potential perf issues w/ io_uring on this version of node
 ENV UV_USE_IO_URING=0
